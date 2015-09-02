@@ -1,0 +1,34 @@
+<header class="header">
+    <div class="header__inner center">
+        @@include('./tabzilla.html')
+
+        <div class="clear"></div>
+
+        <div class="header__logo">
+            @@include('./logo.html')
+        </div>
+
+        <div class="header__auth">
+            @@include('./auth.html')
+        </div>
+
+        @@include('./nav.html')
+
+        <div class="header__search">
+            @@include('./search.html', {"id": "main"})
+        </div>
+    </div>
+</header>
+
+<script>
+    var nav = $('.nav__list');
+    var input = $('#main-search');
+
+    input.on('focus', function() {
+        nav.fadeOut(300);
+    });
+
+    input.on('blur', function() {
+        nav.fadeIn(300);
+    });
+</script>

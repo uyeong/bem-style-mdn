@@ -1,0 +1,50 @@
+@mixin sprite($filename, $map: $sp-markup-clone-mdn, $is-dimension: true) {
+    $dimension-map: map-get($map, $filename);
+
+    @extend %#{map-get($map, spritesheet_name)};
+    background-position: map-get($dimension-map, offset_x) map-get($dimension-map, offset_y);
+    @if ($is-dimension == true) {
+        width: map-get($dimension-map, width);
+        height: map-get($dimension-map, height);
+    }
+}
+
+@mixin size($width, $height: $width) {
+    width: $width;
+    height: $height;
+}
+
+@mixin position($position, $args) {
+    @each $o in top right bottom left {
+        $i: index($args, $o);
+        @if $i and $i + 1 <= length($args)
+               and type-of(nth($args, $i + 1)) == number {
+            #{$o}: nth($args, $i + 1);
+        }
+    }
+
+    position: $position;
+}
+
+@mixin triangle($direction, $position, $color, $size: 1em, $z-index: 2) {
+    @include size(0);
+    @include position(absolute, $position);
+    border: $size solid transparent;
+    content: ' ';
+    z-index: $z-index;
+    border-#{$direction}-color: $color;
+}
+
+@mixin font-awesome-type($type) {
+    content: $type;
+}
+
+@mixin font-awesome($type: false, $top: auto, $left: auto) {
+    font-family: 'FontAwesome';
+    left: $left;
+    top: $top;
+
+    @if $type != false {
+        @include font-awesome-type($type);
+    }
+}

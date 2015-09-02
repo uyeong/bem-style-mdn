@@ -1,0 +1,58 @@
+// ------------------------------------- //
+// Style of Contributor
+// ------------------------------------- //
+
+$module: 'contributor';
+
+.#{$module} {
+    font-size: .857143rem;
+    color: #777;
+    padding: 10px;
+    border-bottom: 1px solid #f1f1f1;
+    border-top: 1px solid #f1f1f1;
+    background: rgba(#eaeff3, .4);
+    margin-top: -20px;
+    margin-bottom: 20px;
+
+    &__list {
+        display: inline;
+    }
+
+    &__item {
+        display: inline-block;
+        margin: 0 5px -5px 0;
+        position: relative;
+        width: 20px;
+        height: 20px;
+    }
+
+    &__avatar,
+    &__picture {
+        width: 100%;
+        height: 100%;
+    }
+
+    &__avatar {
+        display: block;
+        border-radius: 2px;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        &:hover {
+            width: 34px;
+            height: 34px;
+            left: -7px;
+            top: -7px;
+        }
+    }
+
+    &__picture {
+        opacity: .7;
+    }
+
+    &__list:hover &__picture {
+        opacity: 1;
+    }
+}

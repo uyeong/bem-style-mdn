@@ -1,0 +1,26 @@
+<div class="search">
+    <form action="" method="GET">
+        <div class="search__inner">
+            <div class="search__title">
+                <label for="@@id-search">
+                    <i class="fa fa-search"></i>
+                    <span class="blind">Search</span>
+                </label>
+            </div>
+            <input id="@@id-search" class="search__input" placeholder="Search" type="text"/>
+            <input class="blind" type="submit" value="Search"/>
+        </div>
+    </form>
+</div>
+
+<script>
+    var @@id = $('#@@id-search');
+
+    @@id.on('focus', function() {
+        @@id.addClass('search__input--extend');
+    });
+
+    @@id.on('blur', function() {
+        @@id.removeClass('search__input--extend');
+    });
+</script>

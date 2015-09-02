@@ -1,0 +1,10 @@
+// ------------------------------------- //
+// Style of Auth
+// ------------------------------------- //
+
+$module: 'auth';
+
+.#{$module} {
+    font-size: 1.1rem;
+    display: inline-block;
+}

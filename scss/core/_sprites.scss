@@ -1,0 +1,21 @@
+%sp-markup-clone-mdn {
+    background: url('../img/sp_markup-clone-mdn.png') no-repeat;
+    content: '';
+    display: inline-block;
+    overflow: hidden;
+
+    @media screen and (-webkit-min-device-pixel-ratio:1.5),
+        only screen and (-o-min-device-pixel-ratio: 3/2),
+        only screen and (min--moz-device-pixel-ratio: 1.5),
+        only screen and (min-device-pixel-ratio: 1.5){
+        background-image: url('../img/sp_markup-clone-mdn_2x.png');
+        background-repeat: no-repeat;
+        background-size: 153px auto;
+    }
+}
+
+$sp-markup-clone-mdn: (
+    spritesheet_name: sp-markup-clone-mdn,
+    bg_tabzilla: (offset_x: 0, offset_y: -117px, width: 147px, height: 35.5px),
+    bi_logo: (offset_x: 0, offset_y: 0, width: 153px, height: 115px),
+);

@@ -1,0 +1,34 @@
+// ------------------------------------- //
+// Style of Header
+// ------------------------------------- //
+
+$module: 'header';
+
+.#{$module} {
+    background: $gray-lighter url('../img/bg_header_background.png') repeat;
+    width: 100%;
+    border-top: 2px solid lighten($gray-base, 100%);
+    border-bottom: 1px solid transparent;
+
+    &::after {
+        content: ' ';
+        clear: both;
+        display: table;
+    }
+
+    &__logo {
+        float: left;
+    }
+
+    &__auth {
+        position: absolute;
+        top: 12px;
+        right: 200px;
+    }
+
+    &__search {
+        position: absolute;
+        right: 25px;
+        top: 60px;
+    }
+}

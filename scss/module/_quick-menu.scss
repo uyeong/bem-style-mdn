@@ -1,0 +1,59 @@
+// ------------------------------------- //
+// Style of QuickMenu
+// ------------------------------------- //
+
+$module: 'quick-menu';
+
+.#{$module} {
+    margin-bottom: 20px;
+    position: relative;
+    font-size: .85rem;
+    line-height: 1.9;
+
+    a {
+        color: $gray-dark;
+    }
+
+    &__title {
+        display: block;
+        text-transform: uppercase;
+        background: $side-color;
+        margin-left: -6px;
+        padding: 4px 6px 4px 0;
+        text-indent: 6px;
+        font-weight: 600;
+    }
+
+    &__item {
+        padding-top: 6px;
+        position: relative;
+
+        strong {
+            font-weight: 600;
+        }
+    }
+
+    &__item--icon {
+        padding-left: 20px;
+
+        &:before {
+            @include font-awesome($top: 6px, $left: 7px);
+            text-decoration: none;
+            position: absolute;
+        }
+
+        &.caret-down:before {
+            @include font-awesome-type('\f0d7');
+        }
+
+        &.caret-right:before {
+            @include font-awesome-type('\f0da');
+        }
+
+        &.flask:before {
+            @include font-awesome('\f0c3', 4px, 1px);
+            opacity: .3;
+            font-size: 1.03rem;
+        }
+    }
+}

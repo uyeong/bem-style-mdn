@@ -1,0 +1,28 @@
+// ------------------------------------- //
+// Style of Toc
+// ------------------------------------- //
+
+$module: 'toc';
+
+.#{$module} {
+    background: $side-color;
+    padding: 20px 15px;
+
+    &__title {
+        color: $gray-dark;
+        text-transform: uppercase;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    &__item {
+        padding-top: 10px;
+        font-size: .88rem;
+
+        & & {
+            padding-left: 20px;
+        }
+    }
+}

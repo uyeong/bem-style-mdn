@@ -1,0 +1,14 @@
+<div class="message-box message-box--@@type @@icon">
+@@if (type !== 'syntax') {
+    <p>
+        <strong class="message-box__title">@@title</strong><br/>
+        <span class="message-box__body">
+            @@body
+        </span>
+    </p>
+}
+
+@@if (type === 'syntax') {
+    <pre>@@code</pre>
+}
+</div>

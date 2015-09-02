@@ -1,0 +1,49 @@
+<div class="auth">
+    <div class="auth-means">
+        <span class="auth-means__text">Sign in with</span>
+        <ul class="auth-means__list">
+            <li class="auth-means__item auth-means__item--persona">
+                <a href="#">
+                    <i class="fa fa-user"></i>
+                    <span class="blind">Persona</span>
+                </a>
+            </li>
+            <li class="auth-means__item auth-means__item--github">
+                <a href="#">
+                    <i class="fa fa-github"></i>
+                    <span class="blind">GitHub</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="auth-picker">
+        <ul class="auth-picker__list">
+            <li class="auth-picker__item">
+                <a href="#">
+                    <i class="fa fa-user"></i><span>Persona</span>
+                </a>
+            </li>
+            <li class="auth-picker__item">
+                <a href="#">
+                    <i class="fa fa-github"></i><span>GitHub</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<script>
+    var auth = $('.auth');
+    var authMeans = $('.auth-means');
+    var authPicker = $('.auth-picker');
+
+    auth.on('mouseenter', function() {
+        authMeans.addClass('auth-means--hover');
+        authPicker.stop().fadeIn(300);
+    });
+
+    auth.on('mouseleave', function() {
+        authMeans.removeClass('auth-means--hover');
+        authPicker.stop().fadeOut(300);
+    });
+</script>

@@ -1,0 +1,22 @@
+%{{spritesheet_name}} {
+    background: url('{{#options.path}}{{{spritesheet.escaped_image}}}{{/options.path}}') no-repeat;
+    content: '';
+    display: inline-block;
+    overflow: hidden;
+
+    @media screen and (-webkit-min-device-pixel-ratio:1.5),
+        only screen and (-o-min-device-pixel-ratio: 3/2),
+        only screen and (min--moz-device-pixel-ratio: 1.5),
+        only screen and (min-device-pixel-ratio: 1.5){
+        background-image: url('{{{spritesheet.escaped_image}}}');
+        background-repeat: no-repeat;
+        background-size: {{#options.retina}}{{{spritesheet.width}}}{{/options.retina}} auto;
+    }
+}
+
+${{spritesheet_name}}: (
+    spritesheet_name: {{spritesheet_name}},
+    {{#items}}
+    {{name}}: (offset_x: {{#options.zerounit}}{{#options.retina}}{{px.offset_x}}{{/options.retina}}{{/options.zerounit}}, offset_y: {{#options.zerounit}}{{#options.retina}}{{px.offset_y}}{{/options.retina}}{{/options.zerounit}}, width: {{#options.retina}}{{px.width}}{{/options.retina}}, height: {{#options.retina}}{{px.height}}{{/options.retina}}),
+    {{/items}}
+);

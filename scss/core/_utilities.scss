@@ -1,0 +1,40 @@
+// ------------------------------------- //
+// Style of Utilities
+// ------------------------------------- //
+
+.blind {
+    font-size: 0;
+    height: 0;
+    left: 0;
+    line-height: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    visibility: hidden;
+    width: 0;
+}
+
+.clear {
+    clear: both;
+
+    &::after {
+        content: ' ';
+        clear: both;
+        display: table;
+    }
+}
+
+.transparent {
+    box-shadow: none;
+    background-color: transparent;
+    border: 0 none;
+    cursor: pointer;
+}
+
+.center {
+    margin: 0 auto;
+    position: relative;
+    max-width: 1400px;
+    padding-left: 24px;
+    padding-right: 24px;
+}

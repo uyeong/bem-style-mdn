@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>MDN Anatomy</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../css/markup-clone-mdn-0.0.1.min.css"/>
+    <link rel="stylesheet" href="../css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../css/anatomy.css"/>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+</head>
+<body>
+    <div class="wrap center">
+        <h1 class="wrap__title wrap__title--main">MDN Anatomy</h1>
+
+        <div class="wrap__inner">
+            <h2 class="wrap__title wrap__title--underline wrap__title--underline">Logo</h2>
+
+            <div class="wrap__block">
+                @@include('./include/module/logo.html')
+            </div>
+        </div>
+
+        <div class="wrap__inner">
+            <h2 class="wrap__title wrap__title--underline wrap__title--underline">Auth</h2>
+
+            <div class="wrap__block wrap__block--auth">
+                @@include('./include/module/auth.html')
+            </div>
+        </div>
+
+        <div class="wrap__inner">
+            <h2 class="wrap__title wrap__title--underline">Nav</h2>
+
+            <div class="wrap__block">
+                @@include('./include/module/nav.html')
+            </div>
+        </div>
+
+        <div class="wrap__inner">
+            <h2 class="wrap__title wrap__title--underline">NavSubmenu</h2>
+
+            <h3 class="wrap__title">Col</h3>
+            <div class="wrap__block">
+                @@include('./include/module/nav-submenu.html', {"type": "col"})
+            </div>
+
+            <h3 class="wrap__title">Col 2</h3>
+            <div class="wrap__block">
+                @@include('./include/module/nav-submenu.html', {"type": "col2"})
+            </div>
+        </div>
+
+        <div class="wrap__inner">
+            <h2 class="wrap__title wrap__title--underline">Search</h2>
+
+            <div class="wrap__block wrap__block--search">
+                @@include('./include/module/search.html', {"id": "block"})
+            </div>
+        </div>
+
+        <div class="wrap__inner">
+            <h2 class="wrap__title wrap__title--underline">Breadcrumbs</h2>
+
+            <div class="wrap__block">
+                @@include('./include/module/breadcrumbs.html')
+            </div>
+        </div>
+
+        <div class="wrap__inner">
+            <h2 class="wrap__title wrap__title--underline">Setting</h2>
+
+            <div class="wrap__block">
+                @@include('./include/module/setting.html')
+            </div>
+        </div>
+
+        <div class="wrap__inner">
+            <h2 class="wrap__title wrap__title--underline">Contributor</h2>
+
+            <div class="wrap__block">
+                @@include('./include/module/contributor.html')
+            </div>
+        </div>
+
+        <div class="wrap__inner">
+            <h2 class="wrap__title">Quick menu</h2>
+
+            <div class="wrap__block">
+                @@include('./include/module/quick-menu.html')
+            </div>
+        </div>
+
+        <div class="wrap__inner">
+            <h2 class="wrap__title">Table of Contents</h2>
+
+            <div class="wrap__block">
+                @@include('./include/module/toc.html')
+            </div>
+        </div>
+
+        <div class="wrap__inner">
+            <h2 class="wrap__title wrap__title--underline">MessageBox</h2>
+
+            <h3 class="wrap__title">Warning</h3>
+            <div class="wrap__block">
+                @@include('./include/module/message-box.html', {
+                    "type": "warning",
+                    "icon": "message-box__icon flask",
+                    "title": "This is a new technology, part of the ECMAScript 2015 (ES6) standard.",
+                    "body": "This technology's specification has been finalized, but  check the <a href='#Browser_compatibility'>compatibility table</a> for usage and implementation status in various browsers."
+                })
+            </div>
+
+            <h3 class="wrap__title">Note</h3>
+            <div class="wrap__block">
+                @@include('./include/module/message-box.html', {
+                    "type": "note",
+                    "icon": "message-box__icon note",
+                    "title": "Note:",
+                    "body": "promise is said to be <em>settled </em>if it is either fulfilled or rejected, but not pending. You will also hear the term <em>resolved</em> used with promises — this means that the promise is settled, or it is locked into a promise chain. Domenic Denicola's <a href='https://github.com/domenic/promises-unwrapping/blob/master/docs/states-and-fates.md' class='external external-icon'>States and fates</a> contains more details about promise terminology."
+                })
+            </div>
+
+            <h3 class="wrap__title">Syntax</h3>
+            <div class="wrap__block">
+                @@include('./include/module/message-box.html', {
+                    "type": "syntax",
+                    "code": "new Promise(<em>executor</em>);\nnew Promise(function(resolve, reject) { ... });"
+                })
+            </div>
+        </div>
+
+        <div class="wrap__inner">
+            <h2 class="wrap__title wrap__title--underline">Wiki</h2>
+
+            <div class="wrap__block">
+                @@include('./include/module/wiki.html')
+            </div>
+        </div>
+
+        <div class="wrap__inner">
+            <h2 class="wrap__title wrap__title--underline">Header</h2>
+
+            <div class="wrap__block">
+                @@include('./include/module/header.html')
+            </div>
+        </div>
+
+        <div class="wrap__inner">
+            <h2 class="wrap__title wrap__title--underline">Meta</h2>
+
+            <div class="wrap__block">
+                @@include('./include/module/meta.html')
+            </div>
+        </div>
+
+        <div class="wrap__inner">
+            <h2 class="wrap__title wrap__title--underline">Content</h2>
+
+            <div class="wrap__block">
+                @@include('./include/module/content.html')
+            </div>
+        </div>
+
+        <div class="wrap__inner">
+            <h2 class="wrap__title wrap__title--underline">Footer</h2>
+
+            <div class="wrap__block">
+                @@include('./include/module/footer.html')
+            </div>
+        </div>
+    </div>
+</body>
+</html>

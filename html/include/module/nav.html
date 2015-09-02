@@ -1,0 +1,61 @@
+<nav class="nav" role="navigation">
+    <ul class="nav__list">
+        <li class="nav__item">
+            <a class="nav__link" href="#">
+                <span>Web Platform</span>
+                <i class="fa fa-caret-down"></i>
+            </a>
+
+            <div class="nav__submenu nav__submenu--col2">
+                @@include('./nav-submenu.html', {"type": "col2"})
+            </div>
+        </li>
+        <li class="nav__item">
+            <a class="nav__link" href="#">
+                <span>Mozilla Docs</span>
+                <i class="fa fa-caret-down"></i>
+            </a>
+            <div class="nav__submenu">
+                @@include('./nav-submenu.html', {"type": "col"})
+            </div>
+        </li>
+        <li class="nav__item">
+            <a class="nav__link" href="#">Developer Tools</a>
+        </li>
+        <li class="nav__item">
+            <a class="nav__link" href="#">Demos</a>
+        </li>
+        <li class="nav__item">
+            <a class="nav__link" href="#">Connect</a>
+        </li>
+    </ul>
+</nav>
+
+<script>
+    var navItem = $('.nav .nav__item');
+
+    navItem.find('.nav-submenu').hide();
+
+    navItem.on('click', '.nav-submenu__close', function(event) {
+        var target = $(event.delegateTarget);
+        target.find('.nav-submenu').stop().fadeOut(300);
+    });
+
+    navItem.on('mouseenter', function(event) {
+        var target = $(event.currentTarget);
+        var submenu = target.find('.nav-submenu');
+
+        if (submenu.length > 0) {
+            submenu.stop().fadeIn(300);
+        }
+    });
+
+    navItem.on('mouseleave', function(event) {
+        var target = $(event.currentTarget);
+        var submenu = target.find('.nav-submenu');
+
+        if (submenu.length > 0) {
+            submenu.stop().fadeOut(300);
+        }
+    });
+</script>

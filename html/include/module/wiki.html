@@ -1,0 +1,77 @@
+<div class="wiki">
+    @@include('./message-box.html', {
+        "type": "warning",
+        "icon": "message-box__icon flask",
+        "title": "This is a new technology, part of the ECMAScript 2015 (ES6) standard.",
+        "body": "This technology's specification has been finalized, but  check the <a href='#Browser_compatibility'>compatibility table</a> for usage and implementation status in various browsers."
+    })
+
+    <p>The <strong><code>Promise</code></strong> object is used for deferred and asynchronous computations. A <code>Promise&nbsp;</code>represents an operation that hasn't completed yet, but is expected in the future.</p>
+
+    <h2 id="Syntax">Syntax</h2>
+
+    @@include('./message-box.html', {
+        "type": "syntax",
+        "code": "new Promise(<em>executor</em>);\nnew Promise(function(resolve, reject) { ... });"
+    })
+
+    <h3 id="Parameters">Parameters</h3>
+
+    <dl>
+        <dt><b>executor</b></dt>
+        <dd>Function object with two arguments <code>resolve</code> and <code>reject</code>. The first argument fulfills the promise, the second argument rejects it. We can call these functions&nbsp;once our operation is completed.</dd>
+    </dl>
+
+    <h2 id="Description">Description</h2>
+
+    <p>A <code><strong>Promise</strong></code>&nbsp;represents a proxy for a value not necessarily known when the promise is created. It allows you to associate handlers to an asynchronous action's eventual success value or failure reason. This lets asynchronous methods return values like synchronous methods: instead of the final value, the asynchronous method returns a <em>promise</em> of having a value at some point in the future.</p>
+
+    <p>A <code>Promise</code> is in one of these&nbsp;states:</p>
+
+    <ul>
+        <li><em>pending</em>: initial state, not fulfilled or rejected.</li>
+        <li><em>fulfilled</em>: meaning that the operation completed successfully.</li>
+        <li><em>rejected</em>: meaning that the operation failed.</li>
+    </ul>
+
+    <p>A pending&nbsp;promise can become either <em>fulfilled</em> with a value, or <em>rejected</em> with a reason (error). When either of these happens, the associated handlers queued up by a promise's <code>then</code> method are called. (If the promise has already been fulfilled or rejected when a corresponding handler is attached, the handler will be called, so there is no race condition between an asynchronous operation completing and its handlers being attached.)</p>
+
+    <p>As the <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then" title="The then() method returns a Promise. It takes two arguments, both are callback functions for the success and failure cases of the Promise."><code>Promise.prototype.then</code></a></code> and <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch" title="The catch() method returns a Promise and deals with rejected cases only. It behaves the same as calling Promise.prototype.then(undefined, onRejected)."><code>Promise.prototype.catch</code></a></code> methods return promises, they can be chained—an operation called <em>composition</em>.</p>
+
+    <p><img src="https://mdn.mozillademos.org/files/8633/promises.png" alt=""></p>
+
+    @@include('./message-box.html', {
+        "type": "note",
+        "icon": "message-box__icon note",
+        "title": "Note:",
+        "body": "promise is said to be <em>settled </em>if it is either fulfilled or rejected, but not pending. You will also hear the term <em>resolved</em> used with promises — this means that the promise is settled, or it is locked into a promise chain. Domenic Denicola's <a href='https://github.com/domenic/promises-unwrapping/blob/master/docs/states-and-fates.md' class='external external-icon'>States and fates</a> contains more details about promise terminology."
+    })
+
+    <h2 id="Properties">Properties</h2>
+
+    <dl>
+        <dt><code>Promise.length</code></dt>
+        <dd>Length property whose value is 1 (number of constructor arguments).</dd>
+        <dt><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/prototype" title="The Promise.prototype property represents the prototype for the Promise constructor."><code>Promise.prototype</code></a></dt>
+        <dd>Represents the prototype for the <code>Promise</code> constructor.</dd>
+    </dl>
+
+    <h2 id="Methods">Methods</h2>
+
+    <dl>
+        <dt><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all" title="The Promise.all(iterable) method returns a promise that resolves when all of the promises in the iterable argument have resolved."><code>Promise.all(iterable)</code></a></dt>
+        <dd>Returns a promise that resolves when all of the promises in the iterable argument have resolved. This is useful for aggregating results of multiple promises together.</dd>
+        <dt><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/race" title="The Promise.race(iterable) method returns a promise that resolves or rejects as soon as one of the promises in the iterable resolves or rejects, with the value or reason from that promise."><code>Promise.race(iterable)</code></a></dt>
+        <dd>Returns a promise that resolves or rejects as soon as one of the promises in the iterable resolves or rejects, with the value or reason from that promise.</dd>
+    </dl>
+
+    <dl>
+        <dt><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/reject" title="The Promise.reject(reason) method returns a Promise object that is rejected with the given reason."><code>Promise.reject(reason)</code></a></dt>
+        <dd>Returns a <code>Promise</code> object that is rejected with the given reason.</dd>
+    </dl>
+
+    <dl>
+        <dt><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve" title="The Promise.resolve(value) method returns a Promise object that is resolved with the given value. If the value is a thenable (i.e. has a then method), the returned promise will &quot;follow&quot; that thenable, adopting its eventual state; otherwise the returned promise will be fulfilled with the value."><code>Promise.resolve(value)</code></a></dt>
+        <dd>Returns a <code>Promise</code> object that is resolved with the given value. If the value is a thenable (i.e. has a <code>then</code> method), the returned promise will "follow" that thenable, adopting its eventual state; otherwise the returned promise will be fulfilled with the value. Generally, if you want to know if a value is a promise or not - <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve" title="The Promise.resolve(value) method returns a Promise object that is resolved with the given value. If the value is a thenable (i.e. has a then method), the returned promise will &quot;follow&quot; that thenable, adopting its eventual state; otherwise the returned promise will be fulfilled with the value."><code>Promise.resolve(value)</code></a> it instead and work with the return value as a promise.</dd>
+    </dl>
+</div>

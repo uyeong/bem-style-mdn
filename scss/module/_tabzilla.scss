@@ -1,0 +1,33 @@
+// ------------------------------------- //
+// Style of Tabzilla
+// ------------------------------------- //
+
+$module: 'tabzilla';
+
+.#{$module} {
+    float: right;
+    position: relative;
+
+    &::before {
+        position: absolute;
+        display: block;
+        left: 28px;
+        top: 0;
+        right: 0;
+        width: 88px;
+        height: 26px;
+        content: '';
+        z-index: 1;
+        background-color: $gray-dark;
+    }
+
+    &__link {
+        @include sprite('bg_tabzilla');
+        top: -1px;
+        position: relative;
+        width: 147px;
+        height: 37px;
+        display: block;
+        z-index: 2;
+    }
+}

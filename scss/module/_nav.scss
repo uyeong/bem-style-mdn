@@ -1,0 +1,52 @@
+// ------------------------------------- //
+// Style of Nav
+// ------------------------------------- //
+
+$module: 'nav';
+
+.#{$module} {
+    font-size: 1.01rem;
+    line-height: 1.5;
+    padding-top: 8px;
+    margin-right: 104px;
+    height: 61px;
+
+    &__list {
+        margin: 20px 0;
+        float: right;
+    }
+
+    &__item {
+        position: relative;
+        display: inline-block;
+        margin-left: 31px;
+        text-align: left;
+
+        .fa-caret-down {
+            margin-left: 4px;
+        }
+    }
+
+    &__link {
+        padding: 4px 8px;
+        text-decoration: none;
+        color: #4d4e53;
+        text-transform: uppercase;
+        font-weight: 600;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    &__submenu {
+        position: absolute;
+        top: 40px;
+        right: 50%;
+        margin-right: -110px;
+    }
+    
+    &__submenu--col2 {
+        margin-right: -200px;
+    }
+}

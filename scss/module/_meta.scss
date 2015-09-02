@@ -1,0 +1,16 @@
+// ------------------------------------- //
+// Style of Meta
+// ------------------------------------- //
+
+$module: 'meta';
+
+.#{$module} {
+    height: 41px;
+    position: relative;
+
+    &__setting {
+        position: absolute;
+        right: 0;
+        top: -2px;
+    }
+}

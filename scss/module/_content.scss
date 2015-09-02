@@ -1,0 +1,55 @@
+// ------------------------------------- //
+// Style of Content
+// ------------------------------------- //
+
+$module: 'content';
+
+.#{$module} {
+    &__title {
+        font-family: "Open Sans", sans-serif;
+        word-wrap: break-word;
+        font-weight: 300;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        line-height: 1;
+        font-size: 3.42rem;
+        letter-spacing: -2px;
+    }
+
+    &__body {
+        float: right;
+        width: 48.5%;
+        margin-right: 3%;
+    }
+
+    &__nav {
+        width: 22.75%;
+        float: right;
+        margin-right: 3%;
+
+        a {
+            color: $gray-dark;
+        }
+    }
+
+    &__hide {
+        display: inline-block;
+        padding-left: 20px;
+        font-size: .85em;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        position: relative;
+        cursor: pointer;
+
+        &--caret-up:before {
+            @include font-awesome('\f0d8', 0, 7px);
+            text-decoration: none;
+            position: absolute;
+        }
+    }
+
+    &__toc {
+        width: 22.75%;
+        float: right;
+    }
+}

@@ -1,0 +1,62 @@
+// ------------------------------------- //
+// Style of MessageBox
+// ------------------------------------- //
+
+$module: 'message-box';
+
+.#{$module} {
+    border-left: 5px solid;
+    padding: 10px;
+    margin-bottom: 20px;
+    clear: both;
+    font-size: 12px;
+
+    p,
+    pre {
+        margin: 0;
+    }
+
+    &--warning {
+        background: $brand-warning;
+    }
+
+    &--syntax {
+        background: $brand-syntax;
+        font-size: 1.03rem;
+        font-weight: 400;
+        border-left: 5px solid #558abb;
+    }
+    
+    &--note {
+        background: $brand-note;
+        border-color: darken($brand-note, 30%);
+
+        br {
+            display: none;
+        }
+    }
+
+    &__title {
+        font-size: 1.03rem;
+    }
+
+    &__icon {
+        padding-left: 30px;
+        position: relative;
+
+        &:before {
+            @include font-awesome($top: 6px, $left: 7px);
+            position: absolute;
+            font-size: 1.35rem;
+        }
+
+        &.flask:before {
+            @include font-awesome-type('\f0c3');
+        }
+
+        &.note:before {
+            @include font-awesome-type('\f016');
+            transform: scaleY(-.8) scaleX(.8);
+        }
+    }
+}

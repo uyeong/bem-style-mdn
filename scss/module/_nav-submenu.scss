@@ -1,0 +1,83 @@
+// ------------------------------------- //
+// Style of NavSubmenu
+// ------------------------------------- //
+
+$module: 'nav-submenu';
+
+.#{$module} {
+    width: 180px;
+    z-index: 9999;
+    border-top: 5px solid $gray-dark;
+    background: lighten($gray-base, 100%);
+    position: relative;
+    left: auto;
+    padding: 20px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, .4);
+
+    &::before {
+        @include triangle(
+            $direction: bottom,
+            $position: top -18px right 10px left 98px,
+            $size: 10px,
+            $color: #fff
+        );
+    }
+
+    &::after {
+        @include triangle(
+            $direction: bottom,
+            $position: top -24px right 10px left 98px,
+            $size: 10px,
+            $z-index: 1,
+            $color: $gray-dark
+        );
+    }
+
+    &--col-2 {
+        width: 380px;
+    }
+
+    &--col-2::before {
+        left: 200px;
+    }
+
+    &--col-2::after {
+        left: 200px;
+    }
+
+    &__column {
+        width: 169.5px;
+        vertical-align: text-top;
+        display: inline-block;
+    }
+
+    &__column--last {
+        margin-left: 16px;
+        border-left: 1px dotted $gray-light;
+        padding-left: 20px;
+    }
+
+    &__title {
+        font-weight: 700;
+        text-transform: uppercase;
+        text-decoration: none;
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    &__link {
+        padding: 5px 0;
+        display: block;
+        font-size: .94rem;
+        line-height: 1.37;
+    }
+
+    &__close {
+        position: absolute;
+        top: 0;
+        margin: 0;
+        padding: 10px;
+        right: 0;
+        line-height: 1;
+    }
+}

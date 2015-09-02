@@ -1,0 +1,35 @@
+// ------------------------------------- //
+// Style of Footer
+// ------------------------------------- //
+
+$module: 'footer';
+
+.#{$module} {
+    &__copy {
+        margin: 0 3% 24px 0;
+        float: left;
+        padding-left: 92px;
+        padding-top: 10px;
+        padding-bottom: 0;
+        position: relative;
+        min-height: 62px;
+
+        &:after {
+            left: 0;
+            content: '';
+            display: block;
+            width: 65px;
+            height: 60px;
+            background-size: 205px auto;
+            background: url('../img/logo_sprite.svg') no-repeat 0 -83px;
+            position: absolute;
+            top: 0;
+        }
+    }
+
+    &__form {
+        padding-top: 10px;
+        float: right;
+        display: inline-block;
+    }
+}

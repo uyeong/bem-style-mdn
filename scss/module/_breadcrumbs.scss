@@ -1,0 +1,28 @@
+// ------------------------------------- //
+// Style of Breadcrumbs
+// ------------------------------------- //
+
+$module: 'breadcrumbs';
+
+.#{$module} {
+    margin-bottom: 10px;
+    font-size: .9rem;
+
+    &__item {
+        margin-right: 17px;
+        display: inline-block;
+        position: relative;
+
+        &::after {
+            @include font-awesome('\f054', 4px, -15px);
+            text-decoration: none;
+            color: $crumbs-color;
+            font-size: 70%;
+            position: absolute;
+        }
+    }
+
+    &__item:first-child::after {
+        content: '';
+    }
+}

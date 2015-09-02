@@ -1,0 +1,51 @@
+html,
+body {
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    color: $text-color;
+    line-height: 1.5;
+}
+
+code,
+pre {
+    font-family: Consolas,"Liberation Mono",Courier,monospace;
+}
+
+a {
+    color: $link-color;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+strong,
+h2 {
+    font-weight: 600;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin-bottom: 12px;
+}
+
+h2 {
+    font-size: 2.14rem;
+    letter-spacing: -1px;
+}
+
+h3 {
+    font-size: 1.71rem;
+    letter-spacing: -.021em;
+    font-weight: 200;
+}

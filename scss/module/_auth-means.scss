@@ -1,0 +1,50 @@
+// ------------------------------------- //
+// Style of AuthMeans
+// ------------------------------------- //
+
+$module: 'auth-means';
+
+.#{$module} {
+    transition-property: border-radius;
+    transition-duration: .3s;
+    padding: 4px 8px;
+    background: rgba(0, 0, 0, .1) none repeat scroll 0 0;
+    border-radius: 8px;
+    cursor: default;
+    position: relative;
+    display: inline-block;
+
+    &--hover {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    &__text {
+        font-size: .97rem;
+    }
+
+    &__list {
+        display: inherit;
+    }
+
+    &__item {
+        margin-left: 4px;
+        border-radius: 4px;
+        display: inherit;
+
+        a {
+            text-align: center;
+            padding: 2px 7px 0;
+            color: #fff;
+            display: inherit;
+        }
+    }
+
+    &__item--persona {
+        background: transparent linear-gradient($persona-color, darken($persona-color, 15%)) repeat scroll 0 0;
+    }
+
+    &__item--github {
+        background: transparent linear-gradient($github-color, darken($github-color, 15%)) repeat scroll 0 0;
+    }
+}

@@ -1,0 +1,51 @@
+// ------------------------------------- //
+// Style of Search
+// ------------------------------------- //
+
+$module: 'search';
+
+.#{$module} {
+    padding: 4px 8px;
+    background-color: rgba(#fff, .9);
+    background: #fff;
+    border-radius: 3px;
+    height: 21px;
+    display: inline-block;
+
+    &__inner {
+        position: relative;
+    }
+
+    &__title {
+        position: absolute;
+        right: 0;
+        top: 2px;
+        z-index: 9999;
+        line-height: 1.2;
+    }
+
+    &__input {
+        border: 0 solid transparent;
+        border-right-width: 22px;
+        box-sizing: border-box;
+        font-weight: 700;
+        overflow: hidden;
+        padding: 0;
+        position: relative;
+        width: 48px;
+        max-width: 100%;
+        z-index: 2;
+        cursor: text;
+        opacity: .01;
+        margin-top: 2px;
+        text-transform: uppercase;
+        transition-property: width, opacity;
+        transition-duration: .5s;
+        outline: none;
+    }
+
+    &__input--extend {
+        width: 500px;
+        opacity: .8;
+    }
+}
