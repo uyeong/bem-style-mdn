@@ -1,0 +1,28 @@
+.wrap__block {
+    margin-left: 24px;
+}
+
+.wrap__title--main {
+    font-size: 3rem;
+    margin: 0;
+    text-align: center;
+}
+
+.wrap__title {
+    color: #0095dd;
+    margin-bottom: 20px;
+}
+
+.wrap__title--underline {
+    border-bottom: 1px solid #0095dd;
+}
+
+.wrap__block--auth {
+    padding: 10px;
+    background: #eaeff2;
+}
+
+.wrap__block--search {
+    padding: 10px;
+    background: #dde4e9;
+}
